@@ -1,0 +1,225 @@
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background: rgba(24, 24, 24, 0.92);
+  backdrop-filter: blur(12px);
+  color: #b0b0b0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  overflow-y: auto;
+  z-index: 100;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  transition: width 0.2s ease;
+}
+
+.panel.collapsed {
+  width: 32px;
+}
+
+.collapse-btn {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 10;
+}
+
+.collapse-btn:hover {
+  color: #aaa;
+}
+
+.panel-inner {
+  padding: 16px 16px 32px 16px;
+}
+
+.panel h2 {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel h3 {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+  margin: 16px 0 8px 0;
+}
+
+section {
+  margin-bottom: 4px;
+}
+
+.control-row {
+  margin-bottom: 6px;
+}
+
+.control-row label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.label-text {
+  font-size: 10px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.label-value {
+  font-size: 10px;
+  color: #aaa;
+  font-variant-numeric: tabular-nums;
+}
+
+.control-row input[type='range'] {
+  width: 100%;
+  height: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  outline: none;
+}
+
+.control-row input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+.control-row select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  outline: none;
+}
+
+.control-row select:focus {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.text-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  resize: vertical;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.text-input:focus {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.control-row.checkbox label {
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-row.checkbox input[type='checkbox'] {
+  accent-color: #888;
+}
+
+.play-btn {
+  width: 100%;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+.play-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hint {
+  font-size: 9px;
+  color: #555;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
+.preset-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.preset-btns button {
+  flex: 1;
+  padding: 5px 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  border-radius: 4px;
+  font-size: 10px;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+.preset-btns button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+}
+
+.preset-display {
+  width: 100%;
+  margin-top: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #777;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-family: 'SF Mono', 'Menlo', monospace;
+  resize: none;
+  box-sizing: border-box;
+}
+
+/* Scrollbar styling */
+.panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
